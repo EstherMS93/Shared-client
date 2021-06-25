@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
+
+
 const ComponentFields = (props) => {
     const { name, picture, category, _id } =
         props.event;

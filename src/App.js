@@ -4,8 +4,8 @@ import  Home from "./components/pages/Home";
 import AddEvent from './components/forms/AddEvent';
 //import { NavBar } from "./components/items/NavBar";
 //import ComponentList from './components/pages/ComponentList'
-import ComponentDisplay from './components/pages/ComponentDisplay';
-//import { UpdateEvent } from './components/forms/UpdateEvent';
+import ComponentCard from './components/pages/ComponentCard';
+import UpdateEvent from './components/forms/UpdateEvent';
 
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={ Home } />
         <Route exact path="/add-event" component={ AddEvent } />
-        <Route exact path="/event/:id" component={ ComponentDisplay } />
+        <Route exact path="/event/:id" component={ ComponentCard } />
+        <Route exact path="/update-event/:id" component={ UpdateEvent } />
       </Switch>
     </div>
   );
