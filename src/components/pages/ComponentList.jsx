@@ -15,13 +15,14 @@ export default class ComponentList extends Component {
             this.setState({ events: data });
         });
     }
-    onDeleteHandle() {  const id = this.state.event;
+    onDeleteHandle(id) { 
+        console.log(id)
         apiHandler
         .removeEvent(id)
-        .then((data) => {
+        .then(() => {
         this.setState({events: this.state.events.filter(event => 
-            {if (event.id !== id) { return event; }   
-        }) 
+            event._id !== id   
+        ) 
         })  
     });
 }
@@ -32,10 +33,11 @@ export default class ComponentList extends Component {
             <div>
                 {
                     this.state.events.map((event) => {
+                        console.log(event)
                         return (
                             
-                        <div>
-                            <button onClick={this.onDeleteHandle.bind(this, event.id)}>Delete</button>
+                        <div key = {event._id}>
+                            <button onClick={this.onDeleteHandle.bind(this, event._id)}>Delete</button>
                             <ComponentFields
                                 event={event} />
                         </div>

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Redirect } from "react-router-dom";
-import { buildFormData } from "../../utils/buildFormData"; //need this file
-//to pass the props from the form inputs in order to handle submit by 
-// updating the key:values pairs and then redirect to homepage, which is
-//managed by means of changing the value of the 'created' boolean.
+
 import apiHandler from "../../api/apiHandler";
 
 
 //declaration of state keys (can also be done directly in 'state' within the component)
+//to pass the props from the form inputs in order to handle submit by 
+// updating the key:values pairs and then redirect to homepage, which is
+//managed by means of changing the value of the 'created' boolean.
 const state = {
     name: "",
     picture: "",
@@ -33,14 +33,11 @@ export default class AddEvent extends Component {
 
     onFormSubmit = (event) => {
         event.preventDefault();
-
-        const formSubmit = new FormData();
         const { ...data } = this.state;
-        buildFormData(formSubmit, data);
 
         apiHandler
-            .addEvent(formSubmit)
-            .then((data) => {
+            .addEvent(data)
+            .then(() => {
                 this.setState({
                     ...state,
                     created: true,

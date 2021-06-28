@@ -43,12 +43,15 @@ export default class UpdateEvent extends Component {
 
 
         const id = this.props.match.params.id;
-        const formData = new FormData();
-        formData.append("name", this.state.name)
-        apiHandler
-            .updateEvent(id)
 
-            .then((data) => {
+        const { ...data } = this.state;
+        console.log(data)
+
+
+        apiHandler
+            .updateEvent(id, data)
+
+            .then(() => {
                 this.setState({
                     ...state,
                     created: true,
