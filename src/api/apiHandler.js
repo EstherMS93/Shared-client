@@ -47,7 +47,43 @@ const apiHandler = {
       .delete(`/api/event/${id}`)
       .then((res) => res.data)
       .catch(errorHandler);
+  },
+
+  addComment(data) {
+    return service
+      .post("/api/comment", data)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  getComments() {
+    return service
+      .get("/api/comment")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  getComment(id) {
+    return service
+      .get(`/api/comment/${id}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  updateComment(id, data) {
+    return service
+      .patch(`/api/comment/${id}`, data)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  removeComment(id) {
+    return service
+      .delete(`/api/comment/${id}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
   }
 };
+
 
 export default apiHandler;

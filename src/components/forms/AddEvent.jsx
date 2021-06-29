@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from "react-router-dom";
-
 import apiHandler from "../../api/apiHandler";
-
+import "../../styles/Form.css"
 
 //declaration of state keys (can also be done directly in 'state' within the component)
 //to pass the props from the form inputs in order to handle submit by 
@@ -52,26 +51,30 @@ export default class AddEvent extends Component {
         }
         return (
             <div>
-                <form onSubmit={e => this.onFormSubmit(e)}>
-                    <h1>Add your event!</h1>
+                <form onSubmit={e => this.onFormSubmit(e)}
+                className="formPage">
+                    <h1
+                    className="formHeader">Add your event!</h1>
+                    <label>Name</label>
+                    <br />
                     <input
                         placeholder="Name"
                         value={this.state.name}
                         onChange={e => this.setState({ name: e.target.value })}
-                        type="text">
+                        type="text"
+                        required="true"
+                        className="textInput">
                     </input>
                     <div>
-                        <img
-                            src={this.state.picture}
-                            alt={this.state.name}
-                            onChange={e => this.setState({ picture: e.target.value })}>
-
-                        </img>
+                    <label>Picture</label>
+                    <br />
                         <input
                             placeholder="Picture"
                             value={this.state.picture}
                             onChange={e => this.setState({ picture: e.target.value })}
-                            type="url">
+                            type="url"
+                            className="textInput"
+                            required="true">
                         </input>
                     </div>
                     <div>
@@ -82,6 +85,8 @@ export default class AddEvent extends Component {
                             id="category"
                             onChange={e => this.setState({ category: e.target.value })}
                             value={this.state.category}
+                            required="true"
+                            className="menu"
                         >
                             <option value="" disabled>
                                 Select a category
@@ -92,32 +97,47 @@ export default class AddEvent extends Component {
                             <option value="Sports">Sports</option>
                         </select>
                     </div>
+                    <label>Organizer</label>
+                    <br />
                     <input
                         placeholder="Organizer"
                         value={this.state.organizer}
                         onChange={e => this.setState({ organizer: e.target.value })}
-                        type="text">
+                        type="text"
+                        className="textInput"
+                        required="true">
                     </input>
                     <br />
+                    <label>Poster</label>
+                    <br />
                     <input
-                        placeholder="Your contact"
+                        placeholder="Enter your Instagram @ or Facebook name"
                         value={this.state.poster}
                         onChange={e => this.setState({ poster: e.target.value })}
-                        type="text">
+                        className="textInput"
+                        type="text"
+                        >
                     </input>
+                    <br />
+                    <label>Location</label>
                     <br />
                     <input
                         placeholder="Location"
                         value={this.state.where}
                         onChange={e => this.setState({ where: e.target.value })}
-                        type="text">
+                        className="textInput"
+                        type="text"
+                        required="true">
                     </input>
                     <br />
+                    <label>When did it happen?</label>
+                    <br />
                     <input
-                        placeholder="When did it happen?"
                         value={this.state.when}
                         onChange={e => this.setState({ when: e.target.value })}
-                        type="date">
+                        className="textInput"
+                        type="date"
+                        required="true">
                     </input>
                     <div>
                         <label>Is it happening again?</label>
@@ -127,6 +147,8 @@ export default class AddEvent extends Component {
                             id="upcoming"
                             onChange={e => this.setState({ upcoming: e.target.value })}
                             value={this.state.upcoming}
+                            required="true"
+                            className="menu"
                         >
                             <option value="" disabled>
                                 Select an option
@@ -135,7 +157,7 @@ export default class AddEvent extends Component {
                             <option value="No">No</option>
                         </select>
                     </div>
-                    <button>
+                    <button className="formButton">
                         Submit
                     </button>
                 </form>

@@ -1,0 +1,60 @@
+.displayCard {
+    width: 60vw;
+    height: 70vh;
+    margin: 0 auto;
+    border-radius: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+    padding: 3rem;
+    background: linear-gradient(rgb(223, 35, 91) 0%, rgb(153, 9, 158) 50%, rgb(174, 0, 255) 100%);
+  }
+
+
+.displayInfo {
+    text-align: left;
+    color: white;
+}
+
+.displayImg {
+    max-width: 25 vw;
+    max-height: 50 vw;
+}
+
+.homeDisplay {
+    height: 40vh;
+    margin-bottom: 2em;
+}
+
+.cardButton {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1em;
+    width: 16rem;
+    margin-top: 2%;
+    border: white;
+    border-radius: 2%;
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #0c0c0c inset, 0 0 0 0 #252422;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+
+.cardButton:hover {
+    box-shadow: 0 0 10px 0 rgb(223, 35, 91) inset, 0 0 10px 4px #eba31f;
+    cursor: pointer;
+    color:rgb(153, 9, 158);
+}
+
+.buttonLink {
+    text-decoration: none;
+    color:#fff;
+}
+
+.buttonLink:hover {
+    color:rgb(153, 9, 158);
+}

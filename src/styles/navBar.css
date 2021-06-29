@@ -1,0 +1,29 @@
+.navigation {
+    position: fixed;
+    z-index: 10;
+    background-color: black;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 7rem;
+  }
+  
+.logo {
+    width: 6rem;
+    height: 6rem;
+    padding-left: 2px;
+  }
+  .nav-link {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+  }
+.nav-link:hover {
+color: rgb(223, 35, 91)
+}
+.nav-icon {
+    font-size: 2rem;
+}
