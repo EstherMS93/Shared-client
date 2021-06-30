@@ -1,5 +1,7 @@
 import axios from "axios";
 
+axios.get(`${process.env.REACT_APP_API_URL}`, { withCredentials: true });
+
 const service = axios.create({
   baseURL: process.env.REACT_APP_BACKEND_URL,
 });
