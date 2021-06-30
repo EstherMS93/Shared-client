@@ -58,3 +58,46 @@
 .buttonLink:hover {
     color:rgb(153, 9, 158);
 }
+
+.cardButtonSize{
+    width: auto;
+    height: auto;
+}
+.buttons{
+    width: 10vw;
+}
+
+.commentArea {
+    resize: none;
+    overflow: auto;
+    padding: 1%;
+    background: rgb(214, 202, 202);
+    color:rgb(223, 35, 91);
+    border-radius: 1%;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.commentContainer {
+ display: flex;
+ justify-content: space-evenly;
+ margin-bottom: 2%;
+ width: 70vw;
+ margin-left: 18%;
+ margin-right: 15%;
+}
+
+.commentSection {
+    background: linear-gradient(rgb(223, 35, 91) 0%, rgb(153, 9, 158) 50%, rgb(174, 0, 255) 100%);
+    width: 100vw;
+    padding: 1% 0 5%;
+    margin: 5% 0;
+}
+
+.userName {
+    font-size: 1rem;
+    color: #fff;
+}
+.bubble {
+    font-size: 1.5rem;
+}

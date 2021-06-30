@@ -1,0 +1,28 @@
+.allFooter {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  padding-top: 2%;
+}
+.navigation-footer {
+    position: static;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 2%;
+  }
+  
+.logo-footer {
+    width: 10rem;
+    height: 10rem;
+    padding-left: 2px;
+  }
+
+.contact {
+display: flex;
+flex-direction: column;
+}
