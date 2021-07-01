@@ -1,9 +1,8 @@
 import axios from "axios";
 
-axios.get(`${process.env.REACT_APP_API_URL}`, { withCredentials: true });
-
 const service = axios.create({
   baseURL: process.env.REACT_APP_BACKEND_URL,
+  withCredentials: true,
 });
 
 function errorHandler(error) {
@@ -75,6 +74,13 @@ const apiHandler = {
   updateComment(id, data) {
     return service
       .patch(`/api/comment/${id}`, data)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  getEventComments(id) {
+    return service
+      .get(`/api/event/${id}/comment`)
       .then((res) => res.data)
       .catch(errorHandler);
   },
