@@ -13,7 +13,7 @@ export default class Comment extends Component {
 
     componentDidMount() {
         apiHandler
-            .getEventComments()
+            .getComments()
             .then((data) => {
                 this.setState({ comments: data });
             })

@@ -78,13 +78,6 @@ const apiHandler = {
       .catch(errorHandler);
   },
 
-  getEventComments(id) {
-    return service
-      .get(`/api/event/${id}/comment`)
-      .then((res) => res.data)
-      .catch(errorHandler);
-  },
-
   removeComment(id) {
     return service
       .delete(`/api/comment/${id}`)
