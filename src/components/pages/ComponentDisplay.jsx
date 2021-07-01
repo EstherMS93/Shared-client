@@ -1,6 +1,4 @@
 import React from 'react'
-import AddComment from '../forms/AddComment';
-import Comment from './Comment';
 import "../../styles/eventCard.css"
 
 
@@ -28,8 +26,6 @@ const ComponentDisplay = (props) => {
                     <p>{upcoming}</p>
                 </div>
             </div>
-            <Comment />
-            <AddComment />
         </div>
     );
 };

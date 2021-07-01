@@ -35,7 +35,7 @@ export default class Comment extends Component {
         return (
             <div className="commentSection">
                 <h1
-                className="formHeader">Comments</h1>
+                className="formHeader">Discussion board</h1>
                 <hr />
                 {
                     this.state.comments.map((comment) => {

@@ -46,7 +46,7 @@ export default class UpdateComment extends Component {
                 <form onSubmit={e => this.handleSubmit(e)}
                     className="formPage">
                     <h1
-                        className="formHeader">Do you have something to say about this event?</h1>
+                        className="formHeader">Oops, you didn't mean to say that?</h1>
                     <label>Name</label>
                     <br />
                     <input

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import { Redirect } from "react-router-dom";
 import apiHandler from "../../api/apiHandler";
 
 export default class AddComment extends Component {
@@ -24,7 +23,7 @@ export default class AddComment extends Component {
                 <form onSubmit={e => this.onFormSubmit(e)}
                     className="formPage">
                     <h1
-                        className="formHeader">Do you have something to say about this event?</h1>
+                        className="formHeader">Join the discussion!</h1>
                     <label>Name</label>
                     <br />
                     <input
